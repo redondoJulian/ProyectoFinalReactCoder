@@ -1,0 +1,129 @@
+.card-conteiner-detail {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-conteiner-detail h3 {
+  margin: 22px;
+  font-size: 3rem;
+}
+.main-conteiner-detail .imagen {
+  width: 450px;
+  border-radius: 3rem;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
+}
+.card-conteiner-detail h4 {
+  margin: 22px;
+  font-size: 2rem;
+  font-weight: bold;
+
+  background-color: #ffffff;
+  color: #8a8b70;
+}
+.main-conteiner-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ********************************************* */
+
+.secondary-conteiner-detail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteiner-methods {
+  width: 400px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.card-comprar-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+}
+.card-comprar-detail button {
+  font-size: 1.7rem;
+  margin-bottom: 25px;
+  width: 60%;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #67c360;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.card-comprar-detail button:hover {
+  background-color: #83d97d;
+}
+.card-precio-detail {
+  font-size: 1.7rem;
+  width: 60%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a3a488;
+  border-radius: 8px;
+  border: none;
+  color: white;
+}
+
+.card-cantidad-detail {
+  font-size: 1.7rem;
+  width: 20%;
+  height: 40px;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-cantidad-detail p {
+  font-size: 1.7rem;
+  font-weight: bold;
+  width: 60%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30%;
+  border: none;
+  color: #8a8b70;
+}
+.card-cantidad-detail button {
+  margin: 0px 8px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #a3a488;
+  border-radius: 30%;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.card-cantidad-detail button:hover {
+  background-color: #d7d8bc;
+}

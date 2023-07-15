@@ -1,0 +1,53 @@
+.shop-list {
+  padding-right: 5%;
+  background: linear-gradient(to top, #b9ba98, #d0d1b1);
+  width: 100%;
+  height: 150px;
+  margin: 8px 0;
+  margin-right: 0;
+  border-radius: 2rem;
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-img {
+  height: 150px;
+  border-radius: 2rem;
+}
+
+.shop-box {
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #878870;
+  backdrop-filter: blur(16px);
+}
+.shop-box-p {
+  color: white;
+  padding: 8px 16px;
+}
+.shop-box-amount {
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  background-color: #edeec9;
+  padding: 8px 16px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.shop-button-delete {
+  border: none;
+  color: #878870;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.shop-button-delete:hover {
+  color: white;
+}
