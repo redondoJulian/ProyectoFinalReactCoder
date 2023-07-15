@@ -22,6 +22,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/ProyectoFinalReactCoder" element={<HomePage />} />
             <Route path="/category" element={<CategoryPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/detail-page/:id" element={<DetailPage />} />
