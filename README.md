@@ -4,7 +4,7 @@
 
 Bienvenidos a mi proyecto final de **REACT** de **Coderhouse**! :)\
 `(es una página sin responsive por el momento)`\
-Mientras tanto por el momento lo importante son las funciones que tiene y todo lo que aprendí a lo largo del curso!\
+Mientras tanto por el momento lo importante son las funciones que tiene y todo lo que aprendí a lo largo del curso!
 
 Es un `Ecommerce` básico que tiene _15 productos (5 remeras, 5 buzos y 5 pantalones)_, y tiene un sistema con el **React Router DOM** que la página en su totalidad nunca se recarga!\
 Fué un desafio hacerlo ya que es uno de los proyectos más completos que tengo por el momento.\
