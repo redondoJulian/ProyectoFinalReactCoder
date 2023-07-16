@@ -35,8 +35,9 @@ Se instalan dependencias como [Firebase](https://firebase.google.com/) , [Materi
 
 ### Demostracion:
 
-![gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExajJ2bjA3ZmFza2FkYWZkODhpZDhrd2V4bDV3ZHdsNjloeTEwZ3c5bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ehpZvh8LNg3wWSVSBZ/giphy.gif)
-![gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHFvdzhxODQ5aHkzaDluajlmbmRvN3E5a2M1czF1YXI2M2U3ZjlkOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AxztUPe269Ptraf2ng/giphy.gif)
-![gif](https://media.giphy.com/media/p4A2Ue4J5cm2kg2lVX/giphy.gif)
+### Darkmode incluído
+![gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExam00eDhnbGlzM3dudDk4MmF0a2x6ZWxhZjA3djhlMDNmNWc3N3ZhdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UYIaBDQyWrlk5WgCKM/giphy.gif)
+### Shop funcional
+![gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWgyOXFmdmE5MThhYTFjYXFxZDdkM3Y3d3R1a3R6ZGU4dmgxZTV0YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b06nIjwVEkbstOo89w/giphy.gif)
 
 ---
