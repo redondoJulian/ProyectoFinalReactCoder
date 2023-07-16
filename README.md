@@ -14,7 +14,7 @@ Se que tal vez no tiene mucho pero para mi, que no tengo mucha experiencia tiene
 
 ---
 
-## Instalación
+## Instalación para las dependencias
 
 ```
 npm install
