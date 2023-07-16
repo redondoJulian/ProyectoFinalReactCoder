@@ -10,7 +10,7 @@ const itemsCart = [];
 
 export const ItemProvider = ({ children }) => {
   const [items, setItems] = useState(itemsCart);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const changeTheme = () => {
     setDarkMode(!darkMode);

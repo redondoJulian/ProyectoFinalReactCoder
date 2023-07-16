@@ -9,7 +9,7 @@ const CategoryPage = () => {
         style={
           darkMode
             ? { textAlign: "center", marginTop: "20px", color: "white" }
-            : { textAlign: "center", marginTop: "20px", color: "#d1d1d1" }
+            : { textAlign: "center", marginTop: "20px", color: "#383838" }
         }
       >
         Categorias
