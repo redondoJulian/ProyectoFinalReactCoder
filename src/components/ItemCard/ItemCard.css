@@ -1,10 +1,10 @@
-.card-conteiner {
+.card-conteiner-light {
   width: 300px;
   height: 400px;
   margin: 10px;
   border: rgba(0, 0, 0, 0.1) 4px solid;
   border-radius: 10%;
-  background-color: transparent;
+  background-color: rgba(223, 223, 179, 0.5);
   backdrop-filter: blur(16px);
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
   display: flex;
@@ -12,13 +12,36 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.card-conteiner h3 {
+.card-conteiner-light h3 {
   margin: 15px;
 }
-.card-conteiner .imagen {
+.card-conteiner-light .imagen {
   width: 250px;
   border-radius: 3rem;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
+}
+/*DARK*/
+.card-conteiner-dark {
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  border: rgba(255, 255, 255, 0.2) 2px solid;
+  border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card-conteiner-dark h3 {
+  margin: 15px;
+}
+.card-conteiner-dark .imagen {
+  width: 250px;
+  border-radius: 3rem;
+  box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.3);
 }
 
 .card-comprar {
@@ -29,7 +52,8 @@
   width: 80%;
   margin-bottom: 20px;
 }
-.card-comprar button {
+
+.card-comprar .button-buy-light {
   width: 40%;
   height: 32px;
   display: flex;
@@ -43,8 +67,25 @@
   cursor: pointer;
   transition: 0.2s all ease;
 }
-.card-comprar button:hover {
+.card-comprar .button-buy-light:hover {
   background-color: #83d97d;
+}
+.card-comprar .button-buy-dark {
+  width: 40%;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dbdbdb;
+  border-radius: 8px;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.card-comprar .button-buy-dark:hover {
+  background-color: #749871;
 }
 .card-precio {
   width: 40%;
@@ -60,14 +101,16 @@
 
 .card-cantidad {
   width: 50%;
-  height: 20px;
+  height: 30px;
   margin: 2px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.card-cantidad button {
+.card-cantidad .button-quantity-light {
+  width: 100%;
+  height: 100%;
   margin: 0px 8px;
   text-align: center;
   justify-content: center;
@@ -80,7 +123,25 @@
   cursor: pointer;
   transition: 0.2s all ease;
 }
-.card-cantidad button:hover {
+.card-cantidad .button-quantity-dark {
+  width: 100%;
+  height: 100%;
+  margin: 0px 8px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #9a9a9a;
+  border-radius: 30%;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.card-cantidad .button-quantity-dark:hover {
+  background-color: #6f6f6f;
+}
+.card-cantidad .button-quantity-light:hover {
   background-color: #d7d8bc;
 }
 .card-cantidad-p {

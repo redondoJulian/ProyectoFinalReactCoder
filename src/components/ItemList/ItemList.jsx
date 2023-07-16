@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./ItemList.css";
 
 //Tarjeta de productos
@@ -8,9 +8,13 @@ import ItemCard from "../ItemCard/ItemCard";
 import { db } from "../../firebase/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
 
+//Context
+import { ItemsContext } from "../../context/ItemsContext";
+
 const ItemList = () => {
   //Estado para la lista de los productos provenientes del "firebase"
   const [productos, setProductos] = useState([]);
+  const { darkMode } = useContext(ItemsContext);
 
   //Llamada a todos los productos desde la base de datos de "firebase"
   useEffect(() => {
@@ -30,7 +34,15 @@ const ItemList = () => {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center", marginTop: "20px" }}>Inicio</h1>
+      <h1
+        style={
+          darkMode
+            ? { textAlign: "center", marginTop: "20px", color: "white" }
+            : { textAlign: "center", marginTop: "20px", color: "#d1d1d1" }
+        }
+      >
+        Inicio
+      </h1>
       <div className="itemList-conteiner">
         {productos.map((prod) => {
           return (

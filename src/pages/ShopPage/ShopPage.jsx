@@ -7,7 +7,7 @@ import Checkout from "../../components/Checkout/Checkout";
 import { ItemsContext } from "../../context/ItemsContext";
 
 const ShopPage = () => {
-  const { items } = useContext(ItemsContext);
+  const { items, darkMode } = useContext(ItemsContext);
   //Suma la cantidad de productos + la lantidad de un mismo producto agregado
   const cantidadTotal = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
@@ -15,7 +15,15 @@ const ShopPage = () => {
   );
   return (
     <div>
-      <h1 style={{ textAlign: "center", marginTop: "20px" }}>Cart</h1>
+      <h1
+        style={
+          darkMode
+            ? { textAlign: "center", marginTop: "20px", color: "white" }
+            : { textAlign: "center", marginTop: "20px", color: "#d1d1d1" }
+        }
+      >
+        Cart
+      </h1>
       <div className="shop-conteiner">
         <div className={items.length ? "no-molestar" : "vacio"}>
           {items.length ? null : <p>¡El carrito de compras está vacio!</p>}

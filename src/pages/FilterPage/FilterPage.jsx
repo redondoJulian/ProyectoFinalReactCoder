@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 
 //Importa el database
@@ -14,11 +14,13 @@ import {
 //Importa la tarjeta para imprimirla
 import ItemCard from "../../components/ItemCard/ItemCard";
 
+//Context
+import { ItemsContext } from "../../context/ItemsContext";
+
 const FilterPage = () => {
   const { category } = useParams(); //guarda el id del url
   const [producto, setProducto] = useState([]);
-
-  console.log(category);
+  const { items, darkMode } = useContext(ItemsContext);
 
   useEffect(() => {
     const getProductos = async () => {
@@ -40,7 +42,13 @@ const FilterPage = () => {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center", marginTop: "20px" }}>
+      <h1
+        style={
+          darkMode
+            ? { textAlign: "center", marginTop: "20px", color: "white" }
+            : { textAlign: "center", marginTop: "20px", color: "#d1d1d1" }
+        }
+      >
         Filtrado por: {category.toUpperCase()}
       </h1>
       <div key={producto.id} className="itemList-conteiner">

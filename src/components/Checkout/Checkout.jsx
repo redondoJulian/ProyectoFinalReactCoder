@@ -25,7 +25,7 @@ const initialState = {
 };
 
 const Checkout = () => {
-  const { items, setItems } = useContext(ItemsContext);
+  const { items, setItems, darkMode } = useContext(ItemsContext);
 
   //values = input | purchaseID = ID generado por el firebase
   const [values, setValues] = useState(initialState);
@@ -52,31 +52,59 @@ const Checkout = () => {
       values.reemail === ""
     ) {
       e.preventDefault();
-      toast.error("❌ ¡Casillas vacias!", {
-        //Lanza una alerta de error
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      if (!darkMode) {
+        toast.error("❌ ¡Casillas vacias!", {
+          //Lanza una alerta de error
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else {
+        toast.error("❌ ¡Casillas vacias!", {
+          //Lanza una alerta de error
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
     } else if (values.email !== values.reemail) {
       //Si están todas llenas las casillas pero los emails no coinciden...
       e.preventDefault();
-      toast.error("❌ ¡Los emails no coinciden!", {
-        //Lanza una alerta de error
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      if (!darkMode) {
+        toast.error("❌ ¡Los emails no coinciden!", {
+          //Lanza una alerta de error
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else {
+        toast.error("❌ ¡Los emails no coinciden!", {
+          //Lanza una alerta de error
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
     } else {
       //Si todas las comprobaciones son exitosas... :)
       e.preventDefault();
@@ -91,17 +119,31 @@ const Checkout = () => {
       setIsLoading(false); //Se elimina el circulo de carga
       setItems([]); //Se vacia el carrito
 
-      toast.success(`✅ Purchase ID: ${docRef.id}!`, {
-        //Se lanza una alerta exitosa con el ID de la compra
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      if (!darkMode) {
+        toast.success(`✅ Purchase ID: ${docRef.id}!`, {
+          //Se lanza una alerta exitosa con el ID de la compra
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else {
+        toast.success(`✅ Purchase ID: ${docRef.id}!`, {
+          //Se lanza una alerta exitosa con el ID de la compra
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
     }
   };
 
@@ -110,12 +152,16 @@ const Checkout = () => {
       <ToastContainer />
       <div className={items.length ? "form-conteiner" : "no-mostrar"}>
         <div className="form-checkout">
-          <h2>Checkout</h2>
+          <h2 style={darkMode ? { color: "white" } : { color: "black" }}>
+            Checkout
+          </h2>
           <p>Datos del cliente</p>
         </div>
         <form onSubmit={onSubmit}>
           <div className="form-style">
-            <p>Nombre: </p>
+            <p style={darkMode ? { color: "white" } : { color: "black" }}>
+              Nombre:
+            </p>
             <input
               type="text"
               name="name"
@@ -125,7 +171,9 @@ const Checkout = () => {
             />
           </div>
           <div className="form-style">
-            <p style={{ color: "gray" }}>Email: </p>
+            <p style={darkMode ? { color: "white" } : { color: "black" }}>
+              Email:{" "}
+            </p>
             <input
               type="email"
               name="email"
@@ -135,7 +183,9 @@ const Checkout = () => {
             />
           </div>
           <div className="form-style">
-            <p style={{ color: "gray" }}>Vuelva a ingresar el Email: </p>
+            <p style={darkMode ? { color: "white" } : { color: "black" }}>
+              Vuelva a ingresar el Email:{" "}
+            </p>
             <input
               type="email"
               name="reemail"
@@ -145,8 +195,11 @@ const Checkout = () => {
             />
           </div>
           <div className="form-style">
-            <p>Ciudad: </p>
+            <p style={darkMode ? { color: "white" } : { color: "black" }}>
+              Ciudad:{" "}
+            </p>
             <input
+              className="dark"
               type="text"
               name="city"
               placeholder="Ciudad del cliente"
@@ -167,7 +220,11 @@ const Checkout = () => {
           <button className="form-button" onClick={onSubmit}>
             Comprar
           </button>
-          <img className="img-methods" src={img} alt="Metodos de pago" />
+          <img
+            className={darkMode ? "img-methods-dark" : "img-methods-light"}
+            src={img}
+            alt="Metodos de pago"
+          />
         </form>
       </div>
     </div>

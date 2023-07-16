@@ -1,6 +1,19 @@
-.shop-list {
+.shop-list-light {
   padding-right: 5%;
   background: linear-gradient(to top, #b9ba98, #d0d1b1);
+  width: 100%;
+  height: 150px;
+  margin: 8px 0;
+  margin-right: 0;
+  border-radius: 2rem;
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop-list-dark {
+  padding-right: 5%;
+  background: linear-gradient(to top, #4a4a4a, #161616);
   width: 100%;
   height: 150px;
   margin: 8px 0;
@@ -17,7 +30,7 @@
   border-radius: 2rem;
 }
 
-.shop-box {
+.shop-box-light {
   border-radius: 1rem;
   color: white;
   display: flex;
@@ -26,11 +39,20 @@
   background-color: #878870;
   backdrop-filter: blur(16px);
 }
+.shop-box-dark {
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  backdrop-filter: blur(16px);
+}
 .shop-box-p {
   color: white;
   padding: 8px 16px;
 }
-.shop-box-amount {
+.shop-box-amount-light {
   width: 100%;
   text-align: center;
   color: black;
@@ -40,14 +62,38 @@
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+.shop-box-amount-dark {
+  width: 100%;
+  text-align: center;
+  color: rgb(238, 238, 238);
+  font-size: 2rem;
+  background-color: #525252;
+  padding: 8px 16px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
 
-.shop-button-delete {
+.shop-button-delete-light {
   border: none;
-  color: #878870;
-  background-color: transparent;
+  color: #edeec9;
+  padding: 8px;
+  border-radius: 1rem;
+  background-color: #98997e;
   cursor: pointer;
   transition: 0.2s all ease;
 }
-.shop-button-delete:hover {
+.shop-button-delete-light:hover {
   color: white;
+}
+.shop-button-delete-dark {
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 1rem;
+  background-color: rgb(69, 69, 69);
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.shop-button-delete-dark:hover {
+  color: rgb(201, 201, 201);
 }

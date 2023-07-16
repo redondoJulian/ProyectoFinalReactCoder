@@ -6,7 +6,7 @@ import "./ItemCard.css";
 import { ItemsContext } from "../../context/ItemsContext";
 
 const ItemCard = ({ data }) => {
-  const { items, addToCart, showAlert } = useContext(ItemsContext);
+  const { items, addToCart, showAlert, darkMode } = useContext(ItemsContext);
   //Cantidad por defecto (1)
   const [quantity, setQuantity] = useState(1);
 
@@ -26,22 +26,60 @@ const ItemCard = ({ data }) => {
   };
 
   return (
-    <div className="card-conteiner">
-      <h3>{data.name}</h3>
+    <div className={darkMode ? "card-conteiner-dark" : "card-conteiner-light"}>
+      <h3 style={darkMode ? { color: "white" } : { color: "black" }}>
+        {data.name}
+      </h3>
 
       <Link to={`/detail-page/${data.id}`}>
         <img className="imagen" src={data.img} alt={data.id} />
       </Link>
 
-      <p className="card-cantidad-p">Cantidad</p>
+      <p
+        className="card-cantidad-p"
+        style={darkMode ? { color: "white" } : { color: "black" }}
+      >
+        Cantidad
+      </p>
       <div className="card-comprar">
-        <p className="card-precio">${data.price}</p>
+        <p
+          className="card-precio"
+          style={
+            darkMode
+              ? { backgroundColor: "#dbdbdb", color: "black" }
+              : { backgroundColor: "#a3a488", color: "white" }
+          }
+        >
+          ${data.price}
+        </p>
         <div className="card-cantidad">
-          <button onClick={lessQuantity}>-</button>
-          <p>{quantity}</p>
-          <button onClick={addQuantity}>+</button>
+          <button
+            className={
+              darkMode ? "button-quantity-dark" : "button-quantity-light"
+            }
+            onClick={lessQuantity}
+          >
+            -
+          </button>
+          <p style={darkMode ? { color: "white" } : { color: "black" }}>
+            {quantity}
+          </p>
+          <button
+            className={
+              darkMode ? "button-quantity-dark" : "button-quantity-light"
+            }
+            onClick={addQuantity}
+          >
+            +
+          </button>
         </div>
-        <button onClick={addProduct}>Agregar</button>
+
+        <button //Boton COMPRAR
+          className={darkMode ? "button-buy-dark" : "button-buy-light"}
+          onClick={addProduct}
+        >
+          Agregar
+        </button>
       </div>
     </div>
   );

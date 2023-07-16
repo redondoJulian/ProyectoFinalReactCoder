@@ -1,4 +1,4 @@
-.card-conteiner-detail {
+.card-conteiner-detail-light {
   width: 100%;
   height: 100%;
   margin: 10px;
@@ -9,24 +9,68 @@
   justify-content: space-between;
   align-items: center;
 }
-.card-conteiner-detail h3 {
+.card-conteiner-detail-light h3 {
   margin: 22px;
   font-size: 3rem;
 }
-.main-conteiner-detail .imagen {
+.main-conteiner-detail-light .imagen {
   width: 450px;
   border-radius: 3rem;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 16px;
 }
-.card-conteiner-detail h4 {
+.card-conteiner-detail-light h4 {
   margin: 22px;
+  padding: 16px;
+  border-radius: 1rem;
   font-size: 2rem;
   font-weight: bold;
 
   background-color: #ffffff;
   color: #8a8b70;
 }
-.main-conteiner-detail {
+.main-conteiner-detail-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*                 DARK               */ /*                 DARK               */ /*                 DARK               */
+
+.card-conteiner-detail-dark {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-conteiner-detail-dark h3 {
+  margin: 22px;
+  font-size: 3rem;
+  color: white;
+}
+.main-conteiner-detail-dark .imagen {
+  width: 450px;
+  border-radius: 3rem;
+  box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+}
+.card-conteiner-detail-dark h4 {
+  margin: 22px;
+  padding: 16px;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+
+  background-color: #555555;
+  color: white;
+}
+.main-conteiner-detail-dark {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,10 +87,18 @@
   align-items: center;
 }
 
-.conteiner-methods {
-  width: 400px;
+.conteiner-methods-light {
+  width: 555px;
+  border-radius: 1rem;
   margin-bottom: 3rem;
   text-align: center;
+}
+.conteiner-methods-dark {
+  width: 555px;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  background-color: white;
 }
 .card-comprar-detail {
   display: flex;

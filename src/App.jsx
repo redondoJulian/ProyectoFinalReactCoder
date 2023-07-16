@@ -1,3 +1,4 @@
+import { useContext, useState } from "react";
 import "./App.css";
 
 //Firebase
@@ -13,6 +14,9 @@ import FilterPage from "./pages/FilterPage/FilterPage";
 
 //Componentes
 import Navbar from "./components/Navbar/Navbar";
+
+//Context
+import { ItemsContext } from "./context/ItemsContext";
 
 const App = () => {
   return (

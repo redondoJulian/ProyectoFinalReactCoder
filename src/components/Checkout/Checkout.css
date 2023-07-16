@@ -81,8 +81,19 @@ form {
   transition: 0.2s all ease;
 }
 
-.img-methods {
+.img-methods-light {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+.img-methods-dark {
+  display: flex;
+  background-color: white;
+  padding: 16px;
+  border-radius: 1rem;
   justify-content: center;
   align-items: center;
   width: 400px;

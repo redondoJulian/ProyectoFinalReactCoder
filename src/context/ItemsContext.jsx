@@ -10,6 +10,11 @@ const itemsCart = [];
 
 export const ItemProvider = ({ children }) => {
   const [items, setItems] = useState(itemsCart);
+  const [darkMode, setDarkMode] = useState(true);
+
+  const changeTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
   //Para eliminar productos del carrito
   const deleteToCart = (data) => {
@@ -40,21 +45,42 @@ export const ItemProvider = ({ children }) => {
 
   //Alerta utilizando "toastify"
   const showAlert = (data) => {
-    toast.success(`✅ Agregado: ${data.name}`, {
-      position: "bottom-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+    if (darkMode) {
+      toast.success(`✅ Agregado: ${data.name}`, {
+        position: "bottom-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    } else {
+      toast.success(`✅ Agregado: ${data.name}`, {
+        position: "bottom-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
   };
 
   return (
     <ItemsContext.Provider
-      value={{ items, addToCart, deleteToCart, setItems, showAlert }} //importa todas las funciones
+      value={{
+        items,
+        darkMode,
+        addToCart,
+        deleteToCart,
+        setItems,
+        showAlert,
+        changeTheme,
+      }} //importa todas las funciones
     >
       <ToastContainer />
       {children}
